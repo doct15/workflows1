@@ -8,6 +8,7 @@ steps:
     - echo "Initializing workflow - Phase Of The Moon"
 - name: sendemail
   image: doct15/pom:latest
+  spec:
     PASSWORD:
       $type: Secret
       name: password
