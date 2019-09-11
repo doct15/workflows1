@@ -14,7 +14,7 @@ steps:
       $type: Secret
       name: password  
   input:
-    - 'sendemail -f doc@tavian.com -t doc@tavian.com -u "POM" -m "$(/usr/games/pom $(date "+%Y%m%d08");/usr/games/pom $(date "+%Y%m%d20");echo "")" -s smtp.tavian.com:587 -xu distelli@tavian.com -xp $PASSWORD -v'
+    - 'sendemail -f doc@tavian.com -t doc@tavian.com -u "POM" -m "$(/usr/games/pom $(date "+%Y%m%d08");/usr/games/pom $(date "+%Y%m%d20");echo "")" -s smtp.tavian.com:587 -xu distelli@tavian.com -xp FpXdojAPG7c7Q4b2B9 -v'
   dependsOn:
     - init-workflow
  
