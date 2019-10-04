@@ -1,0 +1,23 @@
+version: v1
+description: git clone example
+steps:
+- name: git-clone
+  image: projectnebula/core:dae1ccd
+  input:
+  - |
+      GIT=$(ni get -p {.git})
+      ni git clone
+      NAME=$(ni get -p {.git.name})
+      WORKSPACE_PATH=/workspace/${NAME}
+      ls -la $WORKSPACE_PATH
+  spec:
+    git:
+      ssh_key:
+        $type: Secret
+        name: ssh_key
+      known_hosts:
+        $type: Secret
+        name: known_hosts
+      name: name
+      repository: git@github.com:doct15/example-node-docker.git
+      branch: master
