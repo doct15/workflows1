@@ -12,6 +12,7 @@ steps:
       ls -la $WORKSPACE_PATH
       curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | sh
       echo "curl done"
+      ls -la ~/
       source ~/.nvm/nvm.sh
       echo "source done"
       nvm install v6.9.4
