@@ -13,9 +13,11 @@ steps:
       curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | sh
       echo "curl done"
       ls -la ~/
-      ls -la ~/.nvm
+      cat ~/.nvm
       echo "PATH $PATH"
       source ~/.nvm/nvm.sh
+      export NVM_DIR="/builder/home/.nvm"
+      [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
       echo "PATH $PATH"
       echo "source done"
       nvm install v6.9.4
