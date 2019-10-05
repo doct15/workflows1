@@ -13,8 +13,11 @@ steps:
       curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | sh
       echo "curl done"
       source ~/.nvm/nvm.sh
+      echo "source done"
       nvm install v6.9.4
+      echo "install 6.9.4 done"
       npm install npm -g 
+      echo "install npm done"
       npm install
   spec:
     git:
