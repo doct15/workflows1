@@ -1,0 +1,23 @@
+version: v1
+description: terraform test 1
+steps:
+- name: terraform
+  image: projectnebula/terraform:latest
+  spec:
+    provider: aws
+    credentials:
+      credentials.json: 
+        $type: Secret
+        name: credentials
+    workspace: my_workspace
+    directory: tf    
+    git: 
+      ssh_key:
+        $type: Secret
+        name: ssh_key
+      known_hosts:
+        $type: Secret
+        name: known_hosts
+      name: terraform_instance1
+      branch: master
+      repository: git@github.com:doct15/workflows1.git
